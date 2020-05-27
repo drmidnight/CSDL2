@@ -1,5 +1,11 @@
-module CSDL2 [system] {
-  header "/usr/include/SDL2/SDL.h"
-  link "SDL2"
-  export *
+module CSDL2 [system library] {
+        header "/usr/include/SDL2/SDL.h"
+        link "SDL2"
+    export *
+
+    module ttf {
+        header "/usr/include/SDL2/SDL_ttf.h"
+        link "SDL2_ttf"
+        export *
+    }
 }
