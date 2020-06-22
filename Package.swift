@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "CSDL2",
+    
      providers: [
     // .brew(["sqlite"]),
         .apt([
@@ -13,8 +14,12 @@ let package = Package(
                 "libsdl2-ttf-2.0-0"
                 ])
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+    products: [
+        .library(name: "CSDL2", targets: ["CSDL2"]),
+    ],
+    targets: [
+        .systemLibrary(name: "CSDL2"),
     ]
+    
+   
 )
