@@ -5,9 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "CSDL2",
-    
      providers: [
-    // .brew(["sqlite"]),
+        .brew([
+            "sdl2",
+            "sdl2_image",
+            "sdl2_ttf"
+        ]),
         .apt([
                 "libsdl2-2.0-0",
                 "libsdl2-image-2.0-0",
@@ -17,6 +20,7 @@ let package = Package(
     products: [
         .library(name: "CSDL2", targets: ["CSDL2"]),
     ],
+    
     targets: [
         .systemLibrary(name: "CSDL2"),
     ]
