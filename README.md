@@ -1,3 +1,3 @@
 # CSDL2
 
-A description of this package.
+SDL2 Swift generated library.
