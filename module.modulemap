@@ -1,5 +1,7 @@
 module CSDL2 {
         header "shim.h"
         link "SDL2"
-    export *
+        link "SDL2_image"
+        link "SDL2_ttf"
+        export *
 }
